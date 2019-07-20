@@ -1,6 +1,6 @@
 // TODO: position item dans une semaine ?
 // TODO: load from template
-// TODO: infobulle/popup avec liste des semaines où l'élément est utilisé ? 	
+// TODO: infobulle/popup avec liste des semaines où l'élément est utilisé ?
 // TODO: espace blanc au début d'une ligne ?
 // TODO: gestion des erreurs dans la source ?
 // TODO: Bouton ajouter jour férié / vacances
@@ -11,34 +11,33 @@ var Themes, Timeline, currentTheme, currentChapter, debut, lastWeek, lines, pSou
 
 var firstLoad = true;
 
-
 var Utils = {
 
-	getDate: function(date){
-		return date.getDate().toString().padStart(2,'0') + '/' + (date.getMonth()+1).toString().padStart(2,'0');
+	getDate: function (date) {
+		return date.getDate().toString().padStart(2, '0') + '/' + (date.getMonth() + 1).toString().padStart(2, '0');
 	},
-	downloadText: function(filename, txt) {
-	  let el = document.createElement('a');
-	  el.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(txt));
-	  el.setAttribute('download', filename);
+	downloadText: function (filename, txt) {
+		let el = document.createElement('a');
+		el.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(txt));
+		el.setAttribute('download', filename);
 
-	  el.style.display = 'none';
-	  document.body.appendChild(el);
+		el.style.display = 'none';
+		document.body.appendChild(el);
 
-	  el.click();
+		el.click();
 
-	  document.body.removeChild(el);
+		document.body.removeChild(el);
 	},
-	openText: function(file, f) {
+	openText: function (file, f) {
 		let reader = new FileReader();
 
-		reader.onload = function() {
-			f(reader.result);			
+		reader.onload = function () {
+			f(reader.result);
 		}
 
 		reader.readAsText(file);
 	}
-	
+
 }
 
 ////////////////////////////////////
@@ -46,7 +45,6 @@ var Utils = {
 ////////////////////////////////////
 
 Source.load();
-
 
 ///////////////////////////////////////
 // ETAPE 2 : CREATION DE L'INTERFACE //
