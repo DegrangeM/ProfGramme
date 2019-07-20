@@ -1,0 +1,121 @@
+body {
+	display: flex;
+}
+#timeline, #programme {
+	width: 50%;
+}
+#programme textarea {
+	width: 100%;
+}
+#programme div:first-of-type {
+	overflow-x: hidden; /* Pour une raison que j'ignore, une barre de défilement horizontal est apparue à un moment du développement */
+}
+#programme .item/*, .item.ui-draggable-dragging*/ {
+	display: inline-block;
+	margin: 4px 0px;
+	border: 1px solid #555;
+	border-radius: 5px;
+	padding: 2px;
+	background-color:#DDD;
+	cursor: move;
+	z-index: 999;
+}
+
+#programme .item.item-used {
+	background-color: rgb(100,200,100);
+}
+
+#programme h3>b {
+	float: right;
+}
+
+#programme textarea {
+	height: 50vh;
+}
+
+#timeline {
+	display: flex;
+	flex-direction: column;
+	margin-right: 40px;
+}
+
+#timeline h3 {
+	margin: 0px;
+	font-weight: bold;
+	padding: 2px 5px;
+}
+#timeline>div {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2px;
+	margin-bottom: 5px;
+}
+#timeline>div>div {
+	display: flex;
+	align-items: center;
+}
+
+#timeline .holydays, #timeline .weekholydays {
+	color: red;
+}
+
+#timeline .holydays:first-letter {
+  text-transform: capitalize
+}
+
+.weeknumber {
+	text-align: center;
+	font-weight:bold;
+	margin: 0px 15px 0px 10px;
+}
+
+.contenu {
+	padding: 5px;	
+}
+
+#timeline .items {
+	display: flex;
+	flex-direction: column;
+	min-height:50px;
+	width: 100%;
+}
+
+#timeline .item.item-hover {
+	color: #007fff;
+}
+
+#timeline .weekMenu {
+	float: right;
+}
+#timeline .weeknumber {
+	display: flex;
+	flex-direction: column;
+}
+
+#timeline .weeknumber span:last-child:before {
+	display: block;
+	content: '↓';
+}
+
+.weekMenu .ui-icon-plusthick, .weekMenu .ui-icon-minusthick {
+	cursor: pointer;
+}
+
+#timeline>div.tools>h3 {
+	filter:hue-rotate(300deg);
+}
+
+#timeline>div.tools>div {
+	display: block;
+}
+
+.deletearea {
+	padding:5px;
+	border:1px dashed green;
+	text-align:center;
+	margin-top:5px;
+}
+
+#programme input.ouvrir {
+	display:none;
+}
