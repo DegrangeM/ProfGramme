@@ -229,7 +229,177 @@ Fonctions à un ou plusieurs arguments.
 Capacités associées
 - Écrire des fonctions simples ; lire, comprendre, modifier, compléter des fonctions plus complexes. Appeler une fonction.
 - Lire et comprendre une fonction renvoyant une moyenne, un écart type. Aucune connaissance sur les listes n’est exigée.
-- Écrire des fonctions renvoyant le résultat numérique d’une expérience aléatoire, d’une répétition d’expériences aléatoires indépendantes.`
+- Écrire des fonctions renvoyant le résultat numérique d’une expérience aléatoire, d’une répétition d’expériences aléatoires indépendantes.`,
+	'Mathématiquees 1spé 2019': `${exampleShared.start}
+# Algèbre
+= Suites numériques, modèles discrets
+Contenus
+- Exemples de modes de génération d’une suite : explicite un = ƒ(n), par une relation de récurrence un+1 = ƒ(un), par un algorithme, par des motifs géométriques. Notations : u(n), un, (u(n)), (un).
+- Suites arithmétiques : exemples, définition, calcul du terme général. Lien avec l’étude d’évolutions successives à accroissements constants. Lien avec les fonctions affines. Calcul de 1 + 2 + … + n.
+- Suites géométriques : exemples, définition, calcul du terme général. Lien avec l’étude d’évolutions successives à taux constant. Lien avec la fonction exponentielle. Calcul de 1 + q + … + q^n.
+- Sens de variation d’une suite.
+- Sur des exemples, introduction intuitive de la notion de limite, finie ou infinie, d’une suite.
+Capacités attendues
+- Dans le cadre de l’étude d’une suite, utiliser le registre de la langue naturelle, le registre algébrique, le registre graphique, et passer de l’un à l’autre.
+- Proposer, modéliser une situation permettant de générer une suite de nombres. Déterminer une relation explicite ou une relation de récurrence pour une suite définie par un motif géométrique, par une question de dénombrement.
+- Calculer des termes d’une suite définie explicitement, par récurrence ou par un algorithme.
+- Pour une suite arithmétique ou géométrique, calculer le terme général, la somme de termes consécutifs, déterminer le sens de variation.
+- Modéliser un phénomène discret à croissance linéaire par une suite arithmétique, un phénomène discret à croissance exponentielle par une suite géométrique.
+- Conjecturer, dans des cas simples, la limite éventuelle d’une suite.
+Démonstrations
+- Calcul du terme général d’une suite arithmétique, d’une suite géométrique.
+- Calcul de 1 + 2 + … + n.
+- Calcul de 1 + q + … + q^n.
+Exemples d’algorithme
+- Calcul de termes d’une suite, de sommes de termes, de seuil.
+- Calcul de factorielle.
+- Liste des premiers termes d’une suite : suites de Syracuse, suite de Fibonacci.
+= Équations, fonctions polynômes du second degré
+Contenus
+- Fonction polynôme du second degré donnée sous forme factorisée. Racines, signe, expression de la somme et du produit des racines.
+- Forme canonique d’une fonction polynôme du second degré. Discriminant. Factorisation éventuelle. Résolution d’une équation du second degré. Signe.
+Capacités attendues
+- Étudier le signe d’une fonction polynôme du second degré donnée sous forme factorisée.
+- Déterminer les fonctions polynômes du second degré s’annulant en deux nombres réels distincts.
+- Factoriser une fonction polynôme du second degré, en diversifiant les stratégies : racine évidente, détection des racines par leur somme et leur produit, identité remarquable, application des formules générales.
+- Choisir une forme adaptée (développée réduite, canonique, factorisée) d’une fonction polynôme du second degré dans le cadre de la résolution d’un problème (équation, inéquation, optimisation, variations).
+Démonstration
+- Résolution de l’équation du second degré.
+# Analyse
+= Dérivation
+Contenus
+Point de vue local
+- Taux de variation. Sécantes à la courbe représentative d’une fonction en un point donné.
+- Nombre dérivé d’une fonction en un point, comme limite du taux de variation. Notation ƒ’(a).
+- Tangente à la courbe représentative d’une fonction en un point, comme « limite des sécantes ». Pente. Équation : la tangente à la courbe représentative de ƒ au point d’abscisse a est la droite d’équation y = ƒ(a) + ƒ’(a)(x - a).
+Point de vue global
+- Fonction dérivable sur un intervalle. Fonction dérivée.
+- Fonction dérivée des fonctions carré, cube, inverse, racine carrée.
+- Opérations sur les fonctions dérivables : somme, produit, inverse, quotient, fonction dérivée de x ↦ g(ax + b)
+- Pour n dans Z, fonction dérivée de la fonction x ↦ x^n.
+- Fonction valeur absolue : courbe représentative, étude de la dérivabilité en 0.
+Capacités attendues
+- Calculer un taux de variation, la pente d’une sécante.
+- Interpréter le nombre dérivé en contexte : pente d’une tangente, vitesse instantanée, coût marginal…
+- Déterminer graphiquement un nombre dérivé par la pente de la tangente. Construire la tangente en un point à une courbe représentative connaissant le nombre dérivé.
+- Déterminer l’équation de la tangente en un point à la courbe représentative d’une fonction.
+- À partir de la définition, calculer le nombre dérivé en un point ou la fonction dérivée de la fonction carré, de la fonction inverse.
+- Dans des cas simples, calculer une fonction dérivée en utilisant les propriétés des opérations sur les fonctions dérivables.
+Démonstrations
+- Équation de la tangente en un point à une courbe représentative.
+- La fonction racine carrée n’est pas dérivable en 0.
+- Fonction dérivée de la fonction carrée, de la fonction inverse.
+- Fonction dérivée d’un produit.
+Exemple d’algorithme
+- Écrire la liste des coefficients directeurs des sécantes pour un pas donné.
+= Variations et courbes représentatives des fonctions
+Contenus
+- Lien entre le sens de variation d’une fonction dérivable sur un intervalle et signe de sa fonction dérivée ; caractérisation des fonctions constantes.
+- Nombre dérivé en un extremum, tangente à la courbe représentative.
+Capacités attendues
+- Étudier les variations d’une fonction. Déterminer les extremums.
+- Résoudre un problème d’optimisation.
+- Exploiter les variations d’une fonction pour établir une inégalité. Étudier la position relative de deux courbes représentatives.
+- Étudier, en lien avec la dérivation, une fonction polynôme du second degré : variations, extremum, allure selon le signe du coefficient de x².
+Exemple d’algorithme
+- Méthode de Newton, en se limitant à des cas favorables.
+= Fonction exponentielle
+Contenus
+- Définition de la fonction exponentielle, comme unique fonction dérivable sur R vérifiant ƒ’ = ƒ et ƒ(0) = 1. L’existence et l’unicité sont admises. Notation exp(x).
+- Pour tous réels x et y, exp(x + y) = exp(x) exp(y) et exp(x) exp(-x) = 1. Nombre e. Notation e^x.
+- Pour tout réel a, la suite (ena) est une suite géométrique.
+- Signe, sens de variation et courbe représentative de la fonction exponentielle.
+Capacités attendues
+- Transformer une expression en utilisant les propriétés algébriques de la fonction exponentielle.
+- Pour une valeur numérique strictement positive de k, représenter graphiquement les fonctions t ↦ e^(-kt) et t ↦ e^(kt).
+- Modéliser une situation par une croissance, une décroissance exponentielle (par exemple évolution d’un capital à taux fixe, décroissance radioactive).
+Exemple d’algorithme
+- Construction de l’exponentielle par la méthode d’Euler. Détermination d’une valeur approchée de e à l’aide de la suite (1+1/n)^n.
+= Fonctions trigonométriques
+Contenus
+- Cercle trigonométrique. Longueur d’arc. Radian.
+- Enroulement de la droite sur le cercle trigonométrique. Image d’un nombre réel.
+- Cosinus et sinus d’un nombre réel. Lien avec le sinus et le cosinus dans un triangle rectangle. Valeurs remarquables.
+- Fonctions cosinus et sinus. Parité, périodicité. Courbes représentatives.
+Capacités attendues
+- Placer un point sur le cercle trigonométrique.
+- Lier la représentation graphique des fonctions cosinus et sinus et le cercle trigonométrique.
+- Traduire graphiquement la parité et la périodicité des fonctions trigonométriques.
+- Par lecture du cercle trigonométrique, déterminer, pour des valeurs remarquables de x, les cosinus et sinus d’angles associés à x.
+Démonstration
+- Calcul de sin(π/4), cos(π/3), sin(π/3).
+Exemple d’algorithme
+- Approximation de π par la méthode d’Archimède
+# Géométrie
+= Calcul vectoriel et produit scalaire
+Contenus
+- Produit scalaire à partir de la projection orthogonale et de la formule avec le cosinus. Caractérisation de l’orthogonalité.
+- Bilinéarité, symétrie. En base orthonormée, expression du produit scalaire et de la norme, critère d’orthogonalité.
+- Développement de ||→u+→v||². Formule d’Al-Kashi.
+- Transformation de l’expression →MA→MB.
+Capacités attendues
+- Utiliser le produit scalaire pour démontrer une orthogonalité, pour calculer un angle, une longueur dans le plan ou dans l’espace.
+- En vue de la résolution d’un problème, calculer le produit scalaire de deux vecteurs en choisissant une méthode adaptée (en utilisant la projection orthogonale, à l’aide des coordonnées, à l’aide des normes et d’un angle, à l’aide de normes).
+- Utiliser le produit scalaire pour résoudre un problème géométrique.
+Démonstrations
+- Formule d’Al-Kashi (démonstration avec le produit scalaire).
+- Ensemble des points M tels que →MA→MB = 0 (démonstration avec le produit scalaire)
+= Géométrie repérée
+Dans cette section, le plan est rapporté à un repère orthonormé.
+Contenus
+- Vecteur normal à une droite. Le vecteur de coordonnées (a,b) est normal à la droite d’équation ax + by + c =0. Le vecteur (-b,a) en est un vecteur directeur.
+- Équation de cercle.
+- Parabole représentative d’une fonction polynôme du second degré. Axe de symétrie, sommet.
+Capacités attendues
+- Déterminer une équation cartésienne d’une droite connaissant un point et un vecteur normal.
+- Déterminer les coordonnées du projeté orthogonal d’un point sur une droite.
+- Déterminer et utiliser l’équation d’un cercle donné par son centre et son rayon.
+- Reconnaître une équation de cercle, déterminer centre et rayon.
+- Déterminer l’axe de symétrie et le sommet d’une parabole d’équation y = ax² + bx + c.
+- Utiliser un repère pour étudier une configuration.
+# Probabilités et statistiques
+= Probabilités conditionnelles et indépendance
+Contenus
+- Probabilité conditionnelle d’un événement B sachant un événement A de probabilité non nulle. Notation PA(B). Indépendance de deux événements.
+- Arbres pondérés et calcul de probabilités : règle du produit, de la somme.
+- Partition de l’univers (systèmes complets d’événements). Formule des probabilités totales.
+- Succession de deux épreuves indépendantes. Représentation par un arbre ou un tableau.
+Capacités attendues
+- Construire un arbre pondéré ou un tableau en lien avec une situation donnée. Passer du registre de la langue naturelle au registre symbolique et inversement.
+- Utiliser un arbre pondéré ou un tableau pour calculer une probabilité.
+- Calculer des probabilités conditionnelles lorsque les événements sont présentés sous forme de tableau croisé d’effectifs (tirage au sort avec équiprobabilité d’un individu dans une population).
+- Dans des cas simples, calculer une probabilité à l’aide de la formule des probabilités totales.
+- Distinguer en situation PA(B) et PB(A), par exemple dans des situations de type « faux positifs ».
+- Représenter une répétition de deux épreuves indépendantes par un arbre ou un tableau.
+Exemple d’algorithme
+- Méthode de Monte-Carlo : estimation de l’aire sous la parabole, estimation du nombre π.
+= Variables aléatoires réelles
+Le programme ne considère que des univers finis et des variables aléatoires réelles.
+Contenus
+- Variable aléatoire réelle : modélisation du résultat numérique d’une expérience aléatoire ; formalisation comme fonction définie sur l’univers et à valeurs réelles.
+- Loi d’une variable aléatoire.
+- Espérance, variance, écart type d’une variable aléatoire.
+Capacités attendues
+- Interpréter en situation et utiliser les notations {X = a}, {X ⩽ a}, P(X = a), P(X ⩽ a). Passer du registre de la langue naturelle au registre symbolique et inversement.
+- Modéliser une situation à l’aide d’une variable aléatoire.
+- Déterminer la loi de probabilité d’une variable aléatoire.
+- Calculer une espérance, une variance, un écart type.
+- Utiliser la notion d’espérance dans une résolution de problème (mise pour un jeu équitable…).
+Exemples d’algorithmes
+- Algorithme renvoyant l’espérance, la variance ou l‘écart type d’une variable aléatoire.
+- Fréquence d’apparition des lettres d’un texte donné, en français, en anglais.
+Expérimentations
+- Simuler une variable aléatoire avec Python.
+- Lire, comprendre et écrire une fonction Python renvoyant la moyenne d’un échantillon de taille n d’une variable aléatoire.
+- Étudier sur des exemples la distance entre la moyenne d’un échantillon simulé de taille n d’une variable aléatoire et l’espérance de cette variable aléatoire.
+- Simuler, avec Python ou un tableur, N échantillons de taille n d’une variable aléatoire, d’espérance μ et d’écart type σ. Si m désigne la moyenne d’un échantillon, calculer la proportion des cas où l’écart entre m et μ est inférieur ou égal à 2σ / n .
+# Algorithmique et programmation
+= Notion de liste
+Capacités attendues
+- Générer une liste (en extension, par ajouts successifs ou en compréhension).
+- Manipuler des éléments d’une liste (ajouter, supprimer…) et leurs indices.
+- Parcourir une liste.
+- Itérer sur les éléments d’une liste.`
 }
 
 var pSource = examples['Mathématiquees 2nd 2019'];
