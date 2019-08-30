@@ -107,11 +107,11 @@ Capacités associées
 Démonstrations
 - Le projeté orthogonal du point 𝑀 sur une droite ∆ est le point de la droite ∆ le plus proche du point 𝑀.
 - Relation trigonométrique cos²(𝛼) + sin²(𝛼) = 1 dans un triangle rectangle.
-- Le point de concours des médiatrices est le centre du cercle circonscrit.
 Approfondissements
 - Démontrer que les hauteurs d’un triangle sont concourantes.
 - Expression de l’aire d’un triangle : 1/2𝑎𝑏 sin 𝐶.
 - Formule d’Al-Kashi.
+- Le point de concours des médiatrices est le centre du cercle circonscrit.
 =Représenter et caractériser les droites du plan
 Dans cette section, le plan est muni d’un repère orthonormé.
 Connaissances
