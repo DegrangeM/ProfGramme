@@ -30,6 +30,9 @@ var Source = {
 		});
 	},
 	updateItemAdded: function (i, s)  {
+		
+		// Met à jour la source après l'ajout de l'item i à la période débutant à la semaine s
+		
 		let line = lines[i];
 		let m = line.match(/{{([0-9,]+)}}\s*$/);
 		if (m) {
@@ -46,6 +49,9 @@ var Source = {
 		return true;
 	},
 	updateItemMoved: function (l, o, n) { // l = line, o = oldIndex, n = newIndex
+		
+		// Met à jour la source après le déplacement de l'item l de la période o à la période n
+	
 		let line = lines[l];
 		let m = line.match(/{{([0-9,]+)}}\s*$/);
 		let week = m[1].split(',');
@@ -62,6 +68,9 @@ var Source = {
 		return true;
 	},
 	removeItem: function (i, l) {
+		
+		// Met à jour la source après la suppression de l'item l actuellement contenu dans la période i
+		
 		let line = lines[l];
 		let m = line.match(/{{([0-9,]+)}}\s*$/);
 		let week = m[1].split(',');
@@ -76,6 +85,11 @@ var Source = {
 		}
 	},
 	updateLastWeek: function () {
+		
+		// A la fin de la source se trouve une ligne contenant uniquement {{k}} où k est le numéro de somaine de la fin de la dernière période
+		
+		// Cette fonction permet de mettre à jour cette ligne
+		
 		lastWeek = Timeline[Timeline.length - 1].s + Timeline[Timeline.length - 1].duration - 1;
 		if (lines[lines.length - 1].match(/^\s*{{([0-9]+)}}\s*$/)) {
 			lines[lines.length - 1] = lines[lines.length - 1].replace(/^\s*{{([0-9]+)}}\s*$/, '{{' + lastWeek + '}}');
@@ -84,10 +98,16 @@ var Source = {
 		}
 	},
 	save: function () {
+		
+		// Met à jour le textarea ainsi que la variable pSource après modification de la source
+		
 		pSource = lines.join('\n');
 		$("#programme textarea").val(pSource);
 	},
 	load: function () {
+		
+		// Charge le contenu de la source
+		
 		Themes = [/*{
 			name:'',			// Thème
 			Chapters:[{
@@ -282,10 +302,12 @@ var Source = {
 					lines[lines.length - 1] = lines[lines.length - 1].replace(/^\s*{{([0-9]+)}}\s*$/, '{{' + lastWeek + '}}'); // TODO: Use source lib ?
 				}
 			}
-			Timeline[Timeline.length - 1].duration = lastWeek - Timeline[Timeline.length - 1].s + 1;
+			Timeline[Timeline.length - 1].duration = lastWeek - Timeline[Timeline.length - 1].s + 1; // Calcul de la durée de la dernière période
 
 		}
 
+
+		// Calcul des durées des périodes
 		Timeline.forEach(function (timeline, i) {
 			if (i < Timeline.length - 1) {
 				timeline.duration = Timeline[i + 1].s - timeline.s;

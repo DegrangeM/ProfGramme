@@ -14,9 +14,11 @@ var firstLoad = true;
 var Utils = {
 
 	getDate: function (date) {
+		// Transforme un timestamp en date au format jj/mm
 		return date.getDate().toString().padStart(2, '0') + '/' + (date.getMonth() + 1).toString().padStart(2, '0');
 	},
 	downloadText: function (filename, txt) {
+		// Lance le téléchargement d'un fichier texte
 		let el = document.createElement('a');
 		el.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(txt));
 		el.setAttribute('download', filename);
@@ -29,6 +31,7 @@ var Utils = {
 		document.body.removeChild(el);
 	},
 	openText: function (file, f) {
+		// Retourne le contenu d'un fichier choisi par l'utilisateur
 		let reader = new FileReader();
 
 		reader.onload = function () {

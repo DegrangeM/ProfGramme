@@ -1,5 +1,6 @@
 var UI = {
 	updateDate: function (i) {
+		// Met à jour la date de la période i
 		let block = $("#timeline>div").eq(i);
 		let start = new Date();
 		let end = new Date();
@@ -7,16 +8,19 @@ var UI = {
 		end.setTime(debut.getTime() + 1000 * 60 * 60 * 24 * 7 * ((Timeline[i].s - 1) + Timeline[i].duration) - 2 * DSTSHIFT);
 		block.find('h3>span:eq(0)').text(Utils.getDate(start) + ' → ' + Utils.getDate(end));
 	},
-	updateDuration: function (i)  {
+	updateDuration: function (i) {
+		// Met à jour la durée de la période i
 		let block = $("#timeline>div").eq(i);
 		block.find('.weekMenu span:eq(0)').text((Timeline[i].duration > 1 ? Timeline[i].duration + ' semaines' : '1 semaine'));
 	},
 	updateWeek: function (i) {
+		// Met à jour les numéros de semaines (début et fin) de la péridoe i
 		let block = $("#timeline>div").eq(i);
 		block.find('.weeknumber span:eq(0)').text(Timeline[i].s);
 		block.find('.weeknumber span:eq(1)').text(Timeline[i].s + Timeline[i].duration - 1);
 	},
 	updateHolidays: function (i) {
+		// Calcule et affiche les jours fériés de la période i
 		let block = $("#timeline>div").eq(i);
 		let start = debut.getTime() + 1000 * 60 * 60 * 24 * 7 * (Timeline[i].s - 1);
 		let end = debut.getTime() + 1000 * 60 * 60 * 24 * 7 * ((Timeline[i].s - 1) + Timeline[i].duration) - 2 * DSTSHIFT;
@@ -34,6 +38,7 @@ var UI = {
 		});
 	},
 	updateWeekHolidays: function () {
+		// Calcule et affiche les périodes de vacances incluses dans des périodes
 		let shiftWeekHolidays = 0;
 		if (WeekHolidays.length) {
 			Timeline.forEach(function (timeline, i) {
@@ -59,6 +64,7 @@ var UI = {
 		}
 	},
 	createTimelineBlock: function (timeline) {
+		// Créé le block de la période définie par l'objet timeline
 		var block = $("<div />").html(`
 		<h3 class="ui-state-active ui-corner-top">
 			<span></span>
@@ -100,6 +106,7 @@ var UI = {
 		UI.updateHolidays(block.index());
 	},
 	create: function ()  {
+		// Créé l'interface générale
 
 		////////////////////////////////////////////////////////////////////////////////
 		// Création de l'accordion contenant le éléments du programme (partie droite) //
@@ -279,6 +286,8 @@ var UI = {
 		}
 	},
 	firstLoad: function () {
+		// Fonctions à n'exécuter que lors du premier chargement de l'interface
+		
 		// Appuis sur le bouton (+) du nombre de semaines
 
 		$("#timeline").on("click", ".weekMenu span:nth-child(2)", function () {
