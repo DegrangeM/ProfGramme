@@ -11,6 +11,10 @@ var Themes, Timeline, currentTheme, currentChapter, debut, lastWeek, lines, pSou
 
 var firstLoad = true;
 
+var Options = {
+	colorItemByTheme: false
+}
+
 var Utils = {
 
 	getDate: function (date) {

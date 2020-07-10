@@ -22,3 +22,5 @@ mais également d'autres informations telles que :
 Elle contient également votre progression en elle même (`{{5}}` placé à la fin d'un élément permet d'indiquer que cette élément est vu pendant la période débutant à la cinquième semaine).
 
 Si vous souhaitez sauvegarder votre progression, il vous suffit de copier coller la source (vous pouvez également appuyer sur le bouton Télécharger pour obtenir unfichier). De même, si vous souhaitez charger une progression, il vous suffit de coller la source (vous pouvez également appuyer sur le bouton Ouvrir pour charger un fichier). La liste déroulante "Charger un modèle" vous permet de charger automatiquement certains programmes officiels.
+
+Il est également possible d'activer la coloration des éléments (dans la zone de gauche) en ajoutant dans l'onglet Source la ligne `$ colorItemByTheme`.

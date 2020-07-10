@@ -97,6 +97,18 @@ var Source = {
 			lines.push("{{" + lastWeek + "}}");
 		}
 	},
+	getThemeIndexFromLine: function (l) {
+		
+		// Renvoie l'index du Thème contenant l'item associé à la ligne
+		
+		return Themes.findIndex(function(T){
+			return T.Chapters.find(function(C){
+				return C.Items.find(function(I){
+					return I.line == l;
+				}) !== undefined;
+			}) !== undefined;
+		});
+	},
 	save: function () {
 		
 		// Met à jour le textarea ainsi que la variable pSource après modification de la source
@@ -178,6 +190,11 @@ var Source = {
 					}
 				}
 				debut.setTime(debut.getTime() + DSTSHIFT);
+			} else if (line[0] == '$') { // Option
+				let o = line.substr(line[1] == ' ' ? 2 : 1);
+				if (o.toLowerCase() == 'coloritembytheme') {
+					Options.colorItemByTheme = true; 
+				}
 			} else if (line[0] == '#') { // Thème
 				Themes.push({
 					name: line.substr(line[1] == ' ' ? 2 : 1),

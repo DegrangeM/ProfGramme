@@ -452,6 +452,9 @@ var UI = {
 					let l = parseInt($(ui.item).attr('line'));
 					if (ui.item.attr('data-newelement')) { // ajout d'un élément depuis le programme (panel de droite)
 						$(ui.item).attr('data-newelement', '');
+						if(Options.colorItemByTheme) { // on colorie l'item selon la couleur du Thème si l'option est activée
+							$(ui.item).css('color', 'hsl(' + parseInt(Source.getThemeIndexFromLine(l) / Themes.length * 360) + ',50%,50%)'); // en cas de changement de thème à postériori la couleur ne sera pas mis à jour
+						}
 						$('#programme .item[line=' + l + ']').addClass('item-used');
 						if (Source.updateItemAdded(l, Timeline[$(this).parent().parent().index()].s)) { // renvoi false si item est déjà présent
 							Timeline[$(this).parent().parent().index()].items.push(l);
