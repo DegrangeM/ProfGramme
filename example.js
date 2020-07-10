@@ -1,6 +1,6 @@
 var exampleShared = {
-zoneA2020: `@ 01/09/2020
-% 2 % 18/10/2020
+start2020: '@ 01/09/2020',
+zoneA2020: `% 2 % 18/10/2020
 % 11/11/2020
 % 2 % 20/12/2020
 % 2 % 07/02/2021
@@ -12,8 +12,7 @@ zoneA2020: `@ 01/09/2020
 % 14/05/2021
 % 15/05/2021
 % 24/05/2021`,
-zoneB2020: `@ 01/09/2020
-% 2 % 18/10/2020
+zoneB2020: `% 2 % 18/10/2020
 % 11/11/2020
 % 2 % 20/12/2020
 % 2 % 21/02/2021
@@ -25,8 +24,7 @@ zoneB2020: `@ 01/09/2020
 % 14/05/2021
 % 15/05/2021
 % 24/05/2021`,
-zoneC2020: `@ 01/09/2020
-% 2 % 18/10/2020
+zoneC2020: `% 2 % 18/10/2020
 % 11/11/2020
 % 2 % 20/12/2020
 % 2 % 14/02/2021
@@ -54,12 +52,149 @@ holiday2019: `% 2 % 20/10/2019
 }
 
 var examples = {
-	'Zone A 2020': `${exampleShared.zoneA2020}
+	'Zone A 2020': `${exampleShared.start2020}
+${exampleShared.zoneA2020}
 `,
-	'Zone B 2020': `${exampleShared.zoneB2020}
+	'Zone B 2020': `${exampleShared.start2020}
+${exampleShared.zoneB2020}
 `,
-	'Zone C 2020': `${exampleShared.zoneC2020}
+	'Zone C 2020': `${exampleShared.start2020}
+${exampleShared.zoneC2020}
 `,
+	'Mathématiques Terminale Techno (hors STD2A)': `${exampleShared.start2020}
+# Automatismes
+= Proportions et pourcentages
+- calculer, appliquer, exprimer une proportion sous différentes formes (décimale, fractionnaire, pourcentage)
+- calculer la proportion d'une proportion
+= Évolutions et variations
+- passer d'une formulation additive (« augmenter de 5 % », respectivement « diminuer de 5 % ») à une formulation multiplicative (« multiplier par 1,05 », respectivement « multiplier par 0,95 »)
+- appliquer un taux d'évolution pour calculer une valeur finale ou initiale
+- calculer un taux d'évolution, l'exprimer en pourcentage
+- interpréter un indice de base 100 ; calculer un indice ; calculer le taux d'évolution entre deux valeurs
+- calculer le taux d'évolution équivalent à plusieurs évolutions successives
+- calculer un taux d'évolution réciproque 
+- reconnaître une situation contextualisée se modélisant par une suite géométrique dont on identifie la raison
+= Calcul numérique et algébrique
+- effectuer des opérations et des comparaisons entre des fractions simples
+- effectuer des opérations sur les puissances
+- passer d'une écriture d'un nombre à une autre (décimale, fractionnaire, scientifique)
+- estimer un ordre de grandeur
+- effectuer des conversions d'unités
+- résoudre une équation ou une inéquation du premier degré, une équation du type : x² = a
+- déterminer le signe d'une expression du premier degré, d'une expression factorisée du second degré 
+- isoler une variable dans une égalité ou une inégalité qui en comporte plusieurs sur des exemples internes aux mathématiques ou issus des autres disciplines 
+- effectuer une application numérique d'une formule (notamment pour les formules utilisées dans les autres disciplines) 
+- développer, factoriser, réduire une expression algébrique simple 
+- calculer la dérivée d'une fonction polynomiale de degré inférieur ou égal à 3
+- calculer le coefficient directeur de la tangente en un point à une courbe à l'aide de la dérivée
+= Fonctions et représentations
+- déterminer graphiquement des images et des antécédents 
+- résoudre graphiquement une équation, une inéquation du type : ƒ(x) = k, ƒ(x) < k
+- déterminer le signe d'une expression factorisée du second degré à l'aide d'une image mentale de la courbe représentative de la fonction correspondante
+- déterminer graphiquement le signe d'une fonction ou son tableau de variations 
+- exploiter une équation de courbe (appartenance d'un point, calcul de coordonnées) 
+- tracer une droite donnée par son équation réduite ou par un point et son coefficient directeur 
+- lire graphiquement l'équation réduite d'une droite 
+- déterminer l'équation réduite d'une droite à partir des coordonnées de deux de ses points 
+- déterminer graphiquement le coefficient directeur d'une tangente à une courbe
+= Représentations graphiques de données chiffrées :
+- lire un graphique, un histogramme, un diagramme en barres ou circulaire, un diagramme en boîte ou toute autre représentation (repérer l'origine du repère, les unités de graduations ou les échelles...) 
+- passer du graphique aux données et vice versa
+# Analyse
+= Suites numériques
+Suites arithmétiques :
+- moyenne arithmétique de deux nombres 
+- expression en fonction de n du terme de rang n
+- somme des n premiers termes d'une suite arithmétique ; notation 𝚺
+Suites géométriques à termes positifs :
+- moyenne géométrique de deux nombres positifs 
+- expression en fonction de n du terme de rang n
+- somme des n premiers termes d'une suite géométrique ; notation 𝚺
+Capacités attendues :
+- Prouver que trois nombres sont (ou ne sont pas) les termes consécutifs d'une suite arithmétique ou géométrique
+- Déterminer la raison d'une suite arithmétique ou géométrique modélisant une évolution
+- Exprimer en fonction de n le terme général d'une suite arithmétique ou géométrique
+- Calculer la somme des n premiers termes d'une suite arithmétique ou géométrique
+- Reconnaître une situation relevant du calcul d'une somme de termes consécutifs d'une suite arithmétique ou géométrique
+Situations algorithmiques
+- Écrire en langage Python une fonction qui calcule la somme des n premiers carrés, des n premiers cubes ou des n premiers inverses ; établir le lien entre l'écriture de la somme à l'aide du symbole 𝚺, et les composantes de l'algorithme (initialisation, sortie de boucle, accumulateur, compteur)
+= Fonctions exponentielles
+Les fonctions x → a^x (a > 0) comme modèle continu d'évolution relative constante
+- définition de la fonction x → a^x pour x positif comme prolongement à des valeurs non entières positives de la suite géométrique (a^n) ; extension à R- en posant a^-x=1/a^x
+- sens de variation selon les valeurs de a
+- allure de la courbe représentative selon les valeurs de a
+- propriétés algébriques : a^(x+y) = a^x×a^y ; a^(nx) = (a^x)^n pour n entier relatif 
+- cas particulier de l'exposant pour calculer un taux d'évolution moyen équivalent à n évolutions successives.
+Capacités attendues
+- Connaître et utiliser le sens de variation des fonctions de la forme x → ka^x, selon le signe de k et les valeurs de a
+- Connaître les propriétés algébriques des fonctions exponentielles et les utiliser pour transformer des écritures numériques ou littérales
+- Calculer le taux d'évolution moyen équivalent à des évolutions successives
+Situations algorithmiques
+- Intercaler entre deux points déjà construits un troisième point ayant pour abscisse (respectivement pour ordonnée) la moyenne arithmétique (respectivement géométrique) des abscisses (respectivement des ordonnées) des deux points initiaux.
+= Fonction logarithme décimal
+- Définition du logarithme décimal de b pour b > 0 comme l'unique solution de l'équation 10^x = b ; notation log
+- Sens de variation
+- Propriétés algébriques : log(ab) = log(a) + log(b), log(a^n) = nlog(a) et, pour n entier naturel, a et b réels strictement positifs
+Capacités attendues
+- Utiliser le logarithme décimal pour résoudre une équation du type a^x = b ou x^a^ = b d'inconnue x réelle, une inéquation du type a^x < b ou x^a < b d'inconnue x réelle ou du type a^n < b d'inconnue n entier naturel
+- Utiliser les propriétés algébriques de la fonction logarithme décimal pour transformer des expressions numériques ou littérales
+= Fonction inverse
+- Comportement de la fonction inverse aux bornes de son ensemble de définition.
+- Dérivée et sens de variation.
+- Courbe représentative ; asymptotes.
+Capacités attendues
+- Étudier et représenter des fonctions obtenues par combinaisons linéaires de la fonction inverse et de fonctions polynomiales de degré au maximum 3.
+# Statistique et probabilités
+= Séries statistiques à deux variables quantitatives
+- Nuage de points associé à une série statistique à deux variables quantitatives
+- Ajustement affine.
+Capacités attendues
+- Représenter un nuage de points
+- Déterminer et utiliser un ajustement affine pour interpoler ou extrapoler des valeurs inconnues
+- Représenter un nuage de points en effectuant un changement de variable donné (par exemple u^2, 1/t, 1/√n, log(y), ...) afin de conjecturer une relation de linéarité entre de nouvelles variables
+Situations algorithmiques
+- Automatiser le calcul de 𝚺(yi ‑ (axi+b))^2.
+- Rechercher un couple (a,b) minimisant cette expression parmi un ensemble fini de couples proposés par les élèves ou générés par balayage, tirage aléatoire...
+= Probabilités conditionnelles
+- Conditionnement par un événement de probabilité non nulle
+- Indépendance de deux événements de probabilités non nulles
+- Formule des probabilités totales pour une partition de l'univers
+Capacités attendues
+- Construire un arbre de probabilités associé à une situation aléatoire donnée
+- Interpréter les pondérations de chaque branche d'un arbre en termes de probabilités, et notamment de probabilités conditionnelles
+- Faire le lien entre la définition des probabilités conditionnelles et la multiplication des probabilités des branches du chemin correspondant
+- Utiliser un arbre de probabilités pour calculer des probabilités
+- Calculer la probabilité d'un événement connaissant ses probabilités conditionnelles relatives à une partition de l'univers
+= Variables aléatoires discrètes finies
+- Espérance d'une variable aléatoire discrète
+- Loi binomiale B(n,p) ; espérance
+- Coefficients binomiaux  ; triangle de Pascal
+Capacités attendues
+- Calculer l'espérance d'une variable aléatoire discrète dans des cas simples et l'interpréter
+- Calculer des coefficients binomiaux à l'aide du triangle de Pascal pour n<=10
+- Reconnaître une situation relevant de la loi binomiale et en identifier le couple de paramètres.
+Lorsque la variable aléatoire X suit une loi binomiale :
+- interpréter l'événement {X = k} sur un arbre de probabilité 
+- calculer les probabilités des événements {X = 0}, {X = 1}, {X = n}, {X = n - 1} et de ceux qui s'en déduisent par réunion 
+- calculer la probabilité de l'événement {X = k} à l'aide des coefficients binomiaux
+Situations algorithmiques
+- Générer un triangle de Pascal de taille n donnée.
+- Représenter par un diagramme en bâtons la loi de probabilité d'une loi binomiale (n,p). Faire le lien avec l'histogramme des fréquences observées des 1 lors de la simulation de N échantillons de taille n d'une loi de Bernoulli de paramètre p faite en classe de première.
+- Calculer l'espérance 𝚺xipi d'une variable aléatoire suivant une loi de probabilité donnée ; cas particulier d'une variable aléatoire suivant la loi binomiale B(n,p)
+- Représenter graphiquement l'espérance de lois binomiales B(n,p) à p fixé et n variable, à n fixé et p variable puis faire le lien avec l'expression admise de l'espérance
+# Algorithmique et programmation
+= Variables
+- utiliser un générateur de nombres aléatoires entre 0 et 1 pour simuler une loi de Bernoulli de paramètre p
+- utiliser la notion de compteur
+- utiliser le principe d'accumulateur pour calculer une somme, un produit
+= Fonctions
+- identifier les entrées et les sorties d'une fonction
+- structurer un programme en ayant recours aux fonctions
+= Listes
+- générer une liste (en extension, par ajouts successifs, en compréhension) - manipuler des éléments d'une liste (ajouter, supprimer...) et leurs indices
+- itérer sur les éléments d'une liste
+= Sélection de données
+- traiter un fichier contenant des données réelles pour en extraire de l'information et l'analyser - réaliser un tableau croisé de données sur deux critères à partir de données brutes.`,
 	'Zone C 2019': `${exampleShared.start2019}
 ${exampleShared.holiday2019}
 `,
