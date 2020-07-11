@@ -99,6 +99,9 @@ var UI = {
 					'class': 'item',
 					line: l
 				}).text(lines[l].substr(lines[l][1] == ' ' ? 2 : 1).slice(0, m ? -m[0].length : undefined));
+			if(Options.colorItemByTheme) { // on colorie l'item selon la couleur du Thème si l'option est activée
+				spanItem.css('color', 'hsl(' + parseInt(Source.getThemeIndexFromLine(l) / Themes.length * 360) + ',50%,50%)');
+			}
 			block.find('.items').append(spanItem);
 			$('#programme .item[line=' + l + ']').addClass('item-used');
 		});
@@ -453,7 +456,7 @@ var UI = {
 					if (ui.item.attr('data-newelement')) { // ajout d'un élément depuis le programme (panel de droite)
 						$(ui.item).attr('data-newelement', '');
 						if(Options.colorItemByTheme) { // on colorie l'item selon la couleur du Thème si l'option est activée
-							$(ui.item).css('color', 'hsl(' + parseInt(Source.getThemeIndexFromLine(l) / Themes.length * 360) + ',50%,50%)'); // en cas de changement de thème à postériori la couleur ne sera pas mis à jour
+							$(ui.item).css('color', 'hsl(' + parseInt(Source.getThemeIndexFromLine(l) / Themes.length * 360) + ',50%,50%)');
 						}
 						$('#programme .item[line=' + l + ']').addClass('item-used');
 						if (Source.updateItemAdded(l, Timeline[$(this).parent().parent().index()].s)) { // renvoi false si item est déjà présent
