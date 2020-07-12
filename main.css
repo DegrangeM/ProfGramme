@@ -153,6 +153,10 @@ body {
 	}
 	
 	/*
+	#timeline {
+		display: table;
+	}
+	
 	#timeline > div, #programme > h3, #programme > div {
 		break-inside: avoid-page;
 	}
