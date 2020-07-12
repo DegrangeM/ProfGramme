@@ -398,7 +398,10 @@ var UI = {
 				if (newIndex < oldIndex) {
 
 					// On met à jour la semaine de départ du bloc déplacé
+					let oldValueofNewIndex = Timeline[newIndex].s;
 					Timeline[newIndex].s = Timeline[newIndex + 1].s;
+					Source.updateTimelineItems(newIndex, Timeline[newIndex].s - oldValueofNewIndex);
+
 
 					UI.updateDate(newIndex);
 					UI.updateWeek(newIndex);
@@ -410,6 +413,7 @@ var UI = {
 						UI.updateDate(i);
 						UI.updateWeek(i);
 						UI.updateHolidays(i);
+						Source.updateTimelineItems(i, Timeline[newIndex].duration);
 					}
 
 				} else {
@@ -420,10 +424,14 @@ var UI = {
 						UI.updateDate(i);
 						UI.updateWeek(i);
 						UI.updateHolidays(i);
+						Source.updateTimelineItems(i, -Timeline[newIndex].duration);
 					}
 
 					// On met à jour la semaine de départ du bloc déplacé
+					let oldValueofNewIndex = Timeline[newIndex].s;
 					Timeline[newIndex].s = Timeline[newIndex - 1].s + Timeline[newIndex - 1].duration;
+					Source.updateTimelineItems(newIndex, Timeline[newIndex].s - oldValueofNewIndex);
+
 
 					UI.updateDate(newIndex);
 					UI.updateWeek(newIndex);
@@ -432,6 +440,7 @@ var UI = {
 				}
 				
 				UI.updateWeekHolidays();
+				Source.save();
 
 			}
 		});
