@@ -152,6 +152,10 @@ body {
 		break-before: page;
 	}
 	
+	.weekMenu .ui-icon-plusthick, .weekMenu .ui-icon-minusthick {
+		display: none;
+	}
+	
 	/*
 	#timeline {
 		display: table;
