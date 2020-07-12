@@ -402,7 +402,7 @@ var UI = {
 
 					UI.updateDate(newIndex);
 					UI.updateWeek(newIndex);
-					UI.updateHolidays(i);
+					UI.updateHolidays(newIndex);
 
 					// On met à jour la semaine de départ des blocs intermédiaires
 					for (let i = newIndex + 1; i <= oldIndex; i++) {
@@ -427,7 +427,7 @@ var UI = {
 
 					UI.updateDate(newIndex);
 					UI.updateWeek(newIndex);
-					UI.updateHolidays(i);
+					UI.updateHolidays(newIndex);
 
 				}
 
