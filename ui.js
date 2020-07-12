@@ -430,6 +430,8 @@ var UI = {
 					UI.updateHolidays(newIndex);
 
 				}
+				
+				UI.updateWeekHolidays();
 
 			}
 		});

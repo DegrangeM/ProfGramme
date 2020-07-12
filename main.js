@@ -6,6 +6,7 @@
 // TODO: Bouton ajouter jour férié / vacances
 // TODO: Si lors de l'ajout d'une semaine, pas de date de début, la demander !
 // TODO: commentaires ou titre chapitre ?
+// TODO: updateDate utile si c'est updateHolidays qui fait tout ?
 
 var Themes, Timeline, currentTheme, currentChapter, debut, lastWeek, lines, pSource, Holidays, WeekHolidays;
 
