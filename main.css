@@ -156,7 +156,6 @@ body {
 		display: none;
 	}
 	
-	/*
 	#timeline {
 		display: table;
 	}
@@ -164,6 +163,5 @@ body {
 	#timeline > div, #programme > h3, #programme > div {
 		break-inside: avoid-page;
 	}
-	*/
 
 }
