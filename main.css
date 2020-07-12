@@ -119,3 +119,43 @@ body {
 #programme input.ouvrir {
 	display:none;
 }
+
+@media print {
+	
+	body {
+		display: table; /* Les propriété break-X sont incompatibles avec les flexbox */
+		/* flex-wrap: wrap; */
+	}
+	
+	#timeline, #programme {
+		width: 100%;
+	}
+
+	#programme > div.ui-accordion-content {
+		display: block !important;
+	}
+
+	#programme > h3:first-of-type, #programme > div:first-of-type {
+		display: none !important;
+	}
+	
+	#timeline>div.tools {
+		display: none;
+	}
+
+	#timeline {
+		margin-right: 0px;
+		break-after: page;
+	}
+	
+	#programme {
+		break-before: page;
+	}
+	
+	/*
+	#timeline > h3, #timeline > div, #programme > h3, #programme > div {
+		break-inside: avoid-page;
+	}
+	*/
+
+}
