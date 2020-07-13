@@ -134,12 +134,13 @@ var UI = {
 			UI.create();
 		});
 		$("#programme button:eq(0)").button().click(function () {
-			Utils.downloadText('profgramme.txt', pSource.replace(/([^\r])\n/g, '$1\n')); // On rajoute \r pour windows si il n'y est pas
+			Utils.downloadText(currentFile, pSource.replace(/([^\r])\n/g, '$1\n')); // On rajoute \r pour windows si il n'y est pas
 		});
 		$("#programme button:eq(1)").button().click(function () {
 			$('#programme input.ouvrir').change(function () {
 				let files = $('.ouvrir')[0].files;
 				if (files.length) {
+					currentFile = files[0].name;
 					Utils.openText(files[0], function (r) {
 						$("#programme textarea").val(r);
 						pSource = r;
@@ -161,6 +162,7 @@ var UI = {
 
 		$("#programme select").selectmenu({
 			change: function () {
+				currentFile = $(this).val() + '.txt'
 				pSource = examples[$(this).val()];
 				$("#programme textarea").val(pSource);
 				Source.load();

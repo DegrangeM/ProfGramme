@@ -12,6 +12,8 @@ var Themes, Timeline, currentTheme, currentChapter, debut, lastWeek, lines, pSou
 
 var firstLoad = true;
 
+var currentFile ='profgramme.txt';
+
 var Options = {
 	colorItemByTheme: false
 }
