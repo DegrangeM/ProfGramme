@@ -142,10 +142,24 @@ var UI = {
 				if (files.length) {
 					currentFile = files[0].name;
 					Utils.openText(files[0], function (r) {
-						$("#programme textarea").val(r);
-						pSource = r;
-						Source.load();
-						UI.create();
+						if (r.substr(0,33) == 'MATIERE;NIVEAU;DOMAINE;THEME;ITEM') { // On a ouvert un export sacoche
+							r = r.substr(r.indexOf('\n;') + 2);
+							r = r.replace(/\r/g, '');
+							r = r.replace(/\n;;;;"/g, '\n- ');
+							r = r.replace(/"\n/g, '\n');
+							r = r.replace(/\n;;;/g, '\n= ');
+							r = r.replace(/\n;;/g, '\n# ');
+							r = r.split(/\n;/);
+							r.forEach(function(v) {
+								examples[v.substr(0,v.indexOf('\n'))] = v.substr(v.indexOf('\n')+1);
+							});
+							UI.create();
+						} else {
+							$("#programme textarea").val(r);
+							pSource = r;
+							Source.load();
+							UI.create();
+						}
 					});
 				}
 			}).click();
