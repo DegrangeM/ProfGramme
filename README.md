@@ -6,7 +6,7 @@ Profgramme est un logiciel permettant de créer facilement sa progression depuis
 
 ![profgramme2](https://user-images.githubusercontent.com/53106394/61581282-8f1d3200-ab1c-11e9-94da-4fe9101953ef.gif)
 
-# Source
+## Source
 
 L'onglet Source contient non seulement la liste des éléments du programmes qui peuvent être glissé déposé dans la progression :
 * `# Thème`
@@ -24,3 +24,7 @@ Elle contient également votre progression en elle même (`{{5}}` placé à la f
 Si vous souhaitez sauvegarder votre progression, il vous suffit de copier coller la source (vous pouvez également appuyer sur le bouton Télécharger pour obtenir unfichier). De même, si vous souhaitez charger une progression, il vous suffit de coller la source (vous pouvez également appuyer sur le bouton Ouvrir pour charger un fichier). La liste déroulante "Charger un modèle" vous permet de charger automatiquement certains programmes officiels.
 
 Il est également possible d'activer la coloration des éléments (dans la zone de gauche) en ajoutant dans l'onglet Source la ligne `$ colorItemByTheme`.
+
+## Autres
+
+ProfGramme gère également l'[importation de référentiel sacoche](https://github.com/DegrangeM/ProfGramme/wiki/Importation-des-r%C3%A9f%C3%A9rentiels-sacoche).
