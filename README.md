@@ -2,7 +2,7 @@
 
 Profgramme est un logiciel permettant de créer facilement sa progression depuis une liste d'éléments (par exemple tirée d'un programme officiel). Ce logiciel est une simple page web qui peut être téléchargé sur son ordinateur pour être exécuté hors ligne.
 
-[Accéder à la version en ligne](https://mathematiques.xyz/profgramme/)
+[Accéder à la version en ligne](https://degrangem.github.io/ProfGramme/)
 
 [Télécharger pour une exécution hors ligne](https://github.com/DegrangeM/ProfGramme/releases) (cliquer sur `Source code (zip)`)
 
