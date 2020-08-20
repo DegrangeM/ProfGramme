@@ -19,7 +19,9 @@
 	<script src="ui.js"></script> <!-- Gère l'interface -->
 	<script src="main.js"></script> <!-- Fichier principal -->
 	<script>
-		navigator.serviceWorker.register('sw.js');
+		if(location.protocol !== 'file:') {
+			navigator.serviceWorker.register('sw.js');
+		}
 	</script>
 	</body>
 </html>
