@@ -32,3 +32,5 @@ Il est également possible d'activer la coloration des éléments (dans la zone 
 Vous pouvez faire `Ctrl+P` pour imprimer votre progression (en vrai ou au format pdf).
 
 ProfGramme gère également l'[importation de référentiel sacoche](https://github.com/DegrangeM/ProfGramme/wiki/Importation-des-r%C3%A9f%C3%A9rentiels-sacoche).
+
+Lorsque vous accédez à la version en ligne via Google Chrome, vous avez la possibilité "d'installer" l'application via le petit bouton + à la fin de la barre d'adresse.
