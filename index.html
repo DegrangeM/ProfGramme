@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <link rel="stylesheet" href="main.css" />
+	<head>
+		<meta charset="utf-8" />
+		<link rel="shortcut icon" href="logo.svg">
+		<link rel="stylesheet" href="main.css" />
 		<link href="jqueryui/jquery-ui.css" rel="stylesheet">
 		<script src="jqueryui/external/jquery/jquery.js"></script>
 		<script src="jqueryui/jquery-ui.js"></script>
-        <title>Profgramme</title>
-    </head>
+		<title>Profgramme</title>
+		<link rel="manifest" href="manifest.webmanifest" />
+	</head>
 
-    <body>
-        <div id="timeline"></div>
+	<body>
+		<div id="timeline"></div>
 		<div id="programme"></div>
 	<script src="example.js"></script> <!-- Contiens les modèles -->
 	<script src="source.js"></script> <!-- Gère l'analyse et la gestion de la source -->
 	<script src="ui.js"></script> <!-- Gère l'interface -->
 	<script src="main.js"></script> <!-- Fichier principal -->
-    </body>
+	<script>
+		navigator.serviceWorker.register('sw.js');
+	</script>
+	</body>
 </html>
