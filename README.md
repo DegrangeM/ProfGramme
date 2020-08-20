@@ -33,4 +33,4 @@ Vous pouvez faire `Ctrl+P` pour imprimer votre progression (en vrai ou au format
 
 ProfGramme gère également l'[importation de référentiel sacoche](https://github.com/DegrangeM/ProfGramme/wiki/Importation-des-r%C3%A9f%C3%A9rentiels-sacoche).
 
-Il est possible "d'installer" l'application via Google Chrome grâce à la technologie [Progressive Web App](https://github.com/DegrangeM/ProfGramme/wiki/Progressive-Web-App)
+Il est possible "d'installer" l'application via Google Chrome grâce à la technologie [Progressive Web App](https://github.com/DegrangeM/ProfGramme/wiki/Progressive-Web-App).
