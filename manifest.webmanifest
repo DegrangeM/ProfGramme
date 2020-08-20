@@ -1,0 +1,13 @@
+{
+	"name": "ProfGramme",
+	"short_name": "ProfGramme",
+	"description": "ProfGramme est un logiciel permettant de créer facilement sa progression depuis une liste d'éléments.",
+	"start_url": "index.html",
+	"display": "standalone",
+	"icons": [
+	{
+		"src": "logo.svg",
+		"sizes": "144x144"
+	}
+	]
+}
