@@ -4,7 +4,7 @@ Profgramme est un logiciel permettant de créer facilement sa progression depuis
 
 [Accéder à la version en ligne](https://degrangem.github.io/ProfGramme/)
 
-[Télécharger pour une exécution hors ligne](https://github.com/DegrangeM/ProfGramme/releases) (cliquer sur `Source code (zip)`)
+[Télécharger pour une exécution hors ligne](https://github.com/DegrangeM/ProfGramme/releases) (cliquer sur `Source code (zip)`, [plus d'infos](https://github.com/DegrangeM/ProfGramme/wiki/Version-hors-ligne))
 
 ![profgramme2](https://user-images.githubusercontent.com/53106394/61581282-8f1d3200-ab1c-11e9-94da-4fe9101953ef.gif)
 
