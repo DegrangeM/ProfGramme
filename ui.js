@@ -129,9 +129,11 @@ var UI = {
 		`);
 
 		$("#programme textarea").val(pSource).blur(function () {
-			pSource = $(this).val();
-			Source.load();
-			UI.create();
+			if (event.target !== document.activeElement) {
+				pSource = $(this).val();
+				Source.load();
+				UI.create();
+			}
 		});
 		$("#programme button:eq(0)").button().click(function () {
 			Utils.downloadText(currentFile, pSource.replace(/([^\r])\n/g, '$1\n')); // On rajoute \r pour windows si il n'y est pas
