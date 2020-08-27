@@ -140,7 +140,7 @@ var UI = {
 			$('#programme input.ouvrir').change(function () {
 				let files = $('.ouvrir')[0].files;
 				if (files.length) {
-					currentFile = files[0].name;
+					currentFile = files[0].name.replace(/ \([0-9]+\)\.txt$/,'.txt');
 					Utils.openText(files[0], function (r) {
 						if (r.substr(0,33) == 'MATIERE;NIVEAU;DOMAINE;THEME;ITEM') { // On a ouvert un export sacoche
 							r = r.substr(r.indexOf('\n;') + 2);
